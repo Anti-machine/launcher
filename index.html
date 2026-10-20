@@ -19,8 +19,24 @@
         font-size: 1rem;
       }
 
+      .games {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: flex-start;
+      }
+
       .game {
-        margin-bottom: 1.5rem;
+        flex: 1 1 250px;
+        max-width: 320px;
+        margin-bottom: 0;
+      }
+
+      .game img {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        height: auto;
       }
     </style>
   </head>
@@ -45,6 +61,42 @@
           </div>
           <img
             src="games/testgame1/pictures/main.jpg"
+            alt="placeholder picture"
+            width="250px"
+          />
+        </div>
+
+        <div class="game">
+          <h2>Test Game 2</h2>
+          <div class="description">
+            <p>Second placeholder game for testing the flex layout.</p>
+          </div>
+          <img
+            src="games/testgame2/pictures/main.jpg"
+            alt="placeholder picture"
+            width="250px"
+          />
+        </div>
+
+        <div class="game">
+          <h2>Test Game 3</h2>
+          <div class="description">
+            <p>Third placeholder game for testing the flex layout.</p>
+          </div>
+          <img
+            src="games/testgame3/pictures/main.jpg"
+            alt="placeholder picture"
+            width="250px"
+          />
+        </div>
+
+        <div class="game">
+          <h2>Test Game 4</h2>
+          <div class="description">
+            <p>Fourth placeholder game for testing the flex layout.</p>
+          </div>
+          <img
+            src="games/testgame4/pictures/main.jpg"
             alt="placeholder picture"
             width="250px"
           />
