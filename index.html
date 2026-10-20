@@ -37,6 +37,8 @@
         aria-label="Search games by name"
       />
 
+      <span id="no-matches" hidden>No games match that search.</span>
+
       <div class="games" id="test">
         <div class="game">
           <h2>Test Game 1</h2>
@@ -58,11 +60,16 @@
 
       searchInput.addEventListener("input", () => {
         const query = searchInput.value.toLowerCase();
+        let anyMatch = false;
 
         games.forEach((game) => {
           const gameName = game.querySelector("h2").textContent.toLowerCase();
-          game.style.display = gameName.includes(query) ? "" : "none";
+          const matches = gameName.includes(query);
+          game.style.display = matches ? "" : "none";
+          if (matches) anyMatch = true;
         });
+
+        document.getElementById("no-matches").hidden = anyMatch;
       });
     </script>
   </body>
