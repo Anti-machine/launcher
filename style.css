@@ -147,3 +147,7 @@ th {
   /* for simpler code */
   z-index: 1;
 }
+
+#no-matches {
+  color: var(--red);
+}
